@@ -1,0 +1,4 @@
+install php php-fpm php-mysqli
+
+create db dussoji
+mysql -u admin -p dussoji < dussoji.sql
