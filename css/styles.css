@@ -11,6 +11,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
+  --global1:#00B2ED;
+  --global2:#00455c;
   --blue: #0061f2;
   --indigo: #5800e8;
   --purple: #6900c7;
@@ -3290,18 +3292,18 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #0061f2;
-  border-color: #0061f2;
+  background-color: #00b2ed;
+  border-color: #00b2ed;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #0052cc;
-  border-color: #004dbf;
+  background-color: #0099ce;
+  border-color: #0099ce;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #0052cc;
-  border-color: #004dbf;
+  background-color: #00b2ed;
+  border-color: #00b2ed;
   box-shadow: 0 0 0 0.2rem rgba(38, 121, 244, 0.5);
 }
 .btn-primary.disabled, .btn-primary:disabled {
@@ -3311,8 +3313,8 @@ fieldset:disabled a.btn {
 }
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #004dbf;
-  border-color: #0047b2;
+  background-color: #00b2ed;
+  border-color: #00b2ed;
 }
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(38, 121, 244, 0.5);
@@ -3320,29 +3322,29 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #6900c7;
-  border-color: #6900c7;
+  background-color: #00455c;
+  border-color: #00455c;
 }
 .btn-secondary:hover {
   color: #fff;
-  background-color: #5500a1;
-  border-color: #4e0094;
+  background-color: #19576c;
+  border-color: #19576c;
 }
 .btn-secondary:focus, .btn-secondary.focus {
   color: #fff;
-  background-color: #5500a1;
-  border-color: #4e0094;
+  background-color: #00455c;
+  border-color: #00455c;
   box-shadow: 0 0 0 0.2rem rgba(128, 38, 207, 0.5);
 }
 .btn-secondary.disabled, .btn-secondary:disabled {
   color: #fff;
-  background-color: #6900c7;
-  border-color: #6900c7;
+  background-color: #00455c;
+  border-color: #00455c;
 }
 .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
   color: #fff;
-  background-color: #4e0094;
-  border-color: #470087;
+  background-color: #00455c;
+  border-color: #00455c;
 }
 .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(128, 38, 207, 0.5);
@@ -15228,7 +15230,7 @@ button.bg-danger-soft:focus {
 }
 
 .text-primary {
-  color: #0061f2 !important;
+  color: #00b2ed !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -15236,7 +15238,7 @@ a.text-primary:hover, a.text-primary:focus {
 }
 
 .text-secondary {
-  color: #6900c7 !important;
+  color: #00455c !important;
 }
 
 a.text-secondary:hover, a.text-secondary:focus {
@@ -15675,109 +15677,109 @@ body {
 
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-Thin.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-Thin.otf");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-ThinItalic.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-ThinItalic.otf");
   font-weight: 100;
   font-style: italic;
 }
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-ExtraLight.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-ExtraLight.otf");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-ExtraLightItalic.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-ExtraLightItalic.otf");
   font-weight: 200;
   font-style: italic;
 }
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-Light.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-Light.otf");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-LightItalic.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-LightItalic.otf");
   font-weight: 300;
   font-style: italic;
 }
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-Regular.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-Regular.otf");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-RegularItalic.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-RegularItalic.otf");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-Medium.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-Medium.otf");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-MediumItalic.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-MediumItalic.otf");
   font-weight: 500;
   font-style: italic;
 }
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-SemiBold.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-SemiBold.otf");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-SemiBoldItalic.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-SemiBoldItalic.otf");
   font-weight: 600;
   font-style: italic;
 }
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-Bold.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-Bold.otf");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-BoldItalic.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-BoldItalic.otf");
   font-weight: 700;
   font-style: italic;
 }
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-ExtraBold.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-ExtraBold.otf");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-ExtraBoldItalic.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-ExtraBoldItalic.otf");
   font-weight: 800;
   font-style: italic;
 }
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-Black.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-Black.otf");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
   font-family: "Metropolis";
-  src: url("/assets/fonts/metropolis/Metropolis-BlackItalic.otf");
+  src: url("../assets/fonts/metropolis/Metropolis-BlackItalic.otf");
   font-weight: 800;
   font-style: italic;
 }
@@ -16018,8 +16020,8 @@ body {
 }
 
 .bg-gradient-primary-to-secondary {
-  background-color: #0061f2;
-  background-image: linear-gradient(135deg, #0061f2 0%, rgba(105, 0, 199, 0.8) 100%);
+  background-color: #00B2ED;
+  background-image: linear-gradient(135deg, #4bb6db 0%, #65c0e0 50%, #93d3e9 100%);
 }
 
 .bg-gray-100 {
@@ -18273,7 +18275,7 @@ body {
   font-weight: 500;
 }
 .card:not([class*=bg-]) .card-header {
-  color: #0061f2;
+  color: #00b2ed;
 }
 
 .card.bg-dark .card-header,
@@ -18475,7 +18477,7 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 .page-header.page-header-dark .page-header-subtitle {
-  color: rgba(255, 255, 255, 0.5);
+  color: #5d6a71;
 }
 .page-header.page-header-dark .breadcrumb {
   background-color: rgba(0, 0, 0, 0.15);
@@ -18618,8 +18620,8 @@ body {
   margin-right: 1rem;
 }
 .nav-borders .nav-link.active {
-  color: #0061f2;
-  border-bottom-color: #0061f2;
+  color: #00b2ed;
+  border-bottom-color: #00b2ed;
 }
 .nav-borders .nav-link.disabled {
   color: #c5ccd6;
@@ -18837,22 +18839,22 @@ body {
   color: #a2acba;
 }
 .sidenav-light .sidenav-menu .nav-link {
-  color: #1f2d41;
+  color: #00B2ED;
 }
 .sidenav-light .sidenav-menu .nav-link .nav-link-icon {
-  color: #a2acba;
+  color: #00b2ed;
 }
 .sidenav-light .sidenav-menu .nav-link .sidenav-collapse-arrow {
   color: #a2acba;
 }
 .sidenav-light .sidenav-menu .nav-link:hover {
-  color: #0061f2;
+  color: #ef5400;
 }
 .sidenav-light .sidenav-menu .nav-link.active {
-  color: #0061f2;
+  color: #ef5400;
 }
 .sidenav-light .sidenav-menu .nav-link.active .nav-link-icon {
-  color: #0061f2;
+  color: #ef5400;
 }
 .sidenav-light .sidenav-menu-nested {
   border-left-color: #d7dce3;
@@ -19969,13 +19971,13 @@ i-feather svg {
 }
 .icons-org-create .icon-users circle,
 .icons-org-create .icon-users path:first-of-type {
-  color: #0061f2;
+  color: #00b2ed;
 }
 .icons-org-create .icon-users path {
-  color: rgba(0, 97, 242, 0.35);
+  color: rgba(0,178,237, 0.6);
 }
 .icons-org-create .icon-plus {
-  color: #0061f2;
+  color: #00b2ed;
   position: absolute;
   font-size: 1.5rem;
   top: -0.5rem;
@@ -19989,12 +19991,12 @@ i-feather svg {
 .icons-org-join .icon-user {
   height: 4rem;
   width: 4rem;
-  color: #6900c7;
+  color: #00455c;
 }
 .icons-org-join .icon-arrow {
   font-size: 2rem;
   margin: 1rem 0.5rem 1rem 0;
-  color: #6900c7;
+  color: #00455c;
 }
 .icons-org-join .icon-users {
   margin: 0.5rem 0;
@@ -20003,10 +20005,10 @@ i-feather svg {
 }
 .icons-org-join .icon-users circle,
 .icons-org-join .icon-users path:first-of-type {
-  color: rgba(105, 0, 199, 0.5);
+  color: rgba(0,69,92, 0.6);
 }
 .icons-org-join .icon-users path {
-  color: rgba(105, 0, 199, 0.25);
+  color: rgba(0,69,92, 0.4);
 }
 
 .org-or-divider {

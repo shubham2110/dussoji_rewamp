@@ -3,13 +3,12 @@
 <!--
 ********************************************
 Version: 1.0
-Name: Dussoji Video Conferencing Main User Dashboard
+Name: Hostcomm Support Main User Dashboard
 Developed By: www.impactcart.in
-All Rights & License Reserved by D IT Solutions
+All Rights & License Reserved by Damodar IT Solutions Pvt. Ltd.
 Author: Shyam Shanbhag
 Contact: shyam@ditsolutions.net
-Deployed for: www.dussoji.com
-Pre-Owned by: D IT Solutions (www.ditsolutions.net)
+Deployed for: www.hostcommservers.com
 ********************************************
 -->
 <html lang="en">
@@ -24,12 +23,31 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
     <link href="css/styles.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet" crossorigin="anonymous" />
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+    
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/img/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="assets/img/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="assets/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="assets/img/favicon-128.png" sizes="128x128" />
+
+    
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
     <script src="js/validation.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.27.0/feather.min.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    
+     <script type="text/javascript" src="intl-tel-input/build/js/intlTelInput-jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="intl-tel-input/build/css/intlTelInput.css">
 </head>
 
 <style>
@@ -54,6 +72,16 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
         color: #e3a131;
         font-size: 15px;
     }
+    
+     .iti {
+        display: block !important;
+    }
+    
+    .validate{
+        color: red;
+    font-weight: 400;
+    font-size: 13px;
+    }
 
 </style>
 
@@ -61,7 +89,7 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
     <nav class="topnav navbar navbar-expand shadow navbar-light bg-white" id="sidenavAccordion">
        <a class="navbar-brand" href="index.php"><img src="assets/img/log.png"></a>
         <button class="btn btn-icon btn-transparent-dark order-1 order-lg-0 mr-lg-2" id="sidebarToggle" href="#"><i data-feather="menu"></i></button>
-        <form class="form-inline mr-auto d-none d-md-block">
+        <form class="form-inline mr-auto d-none">
             <div class="input-group input-group-joined input-group-solid">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
                 <div class="input-group-append">
@@ -101,7 +129,7 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
                         </a>
                     </div>
                 </li> -->
-            <li class="nav-item dropdown no-caret mr-sm-3 mr-xs-0 d-md-none">
+            <li class="nav-item dropdown no-caret mr-sm-3 mr-xs-0 d-none">
                 <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="searchDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="search"></i></a>
                 <!-- Dropdown - Search-->
                 <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--fade-in-up" aria-labelledby="searchDropdown">
@@ -200,7 +228,7 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
                         <div class="dropdown-item-icon"><i data-feather="settings"></i></div>
                         Account
                     </a>
-                    <a class="dropdown-item" onclick="logout();" style="color: black;">
+                    <a class="dropdown-item" onclick="logout();" style="color: black;cursor:pointer;">
                         <div class="dropdown-item-icon"><i data-feather="log-out"></i></div>
                         Logout
                     </a>
@@ -389,6 +417,8 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
                         </div>
                     </div>
                 </header>
+                
+               
                 <!-- Main page content-->
                 <div class="container mt-n10">
                     <div class="row">
@@ -407,7 +437,7 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
                                     </div>
                                 </div>
                                 <div class="card-footer bg-transparent px-5 py-4">
-                                    <div class="small text-center"><a class="btn btn-block btn-primary" target="_blank" data-toggle="modal" data-target="#createvideo" style="<?php if($dbrole=="USER"){echo "pointer-events: none;
+                                    <div class="small text-center"><a class="btn btn-block btn-primary"  target="_blank" data-toggle="modal" data-target="#createvideo" style="<?php if($dbrole=="USER"){echo "pointer-events: none;
         cursor: default;";}?>">Create new Meeting</a></div>
                                 </div>
                             </div>
@@ -445,20 +475,27 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
                                 </div>
 
                                 <form method="post" role="form" id="contact_form">
-                                    <div class="modal-body">
+                                    <div class="modal-body" id="meeting_create">
 
                                         <div class="form-row">
-                                            <div class="form-group col-md-12"><label class="text-dark" for="meetingName">Meeting name</label><input class="form-control py-4" id="inputName" name="inputName" type="text" placeholder="Meeting Name" /></div>
-
+                                            <div class="form-group col-md-12"><label class="text-dark" for="meetingName">Meeting name</label><input class="form-control py-4" id="inputName" name="inputName" type="text" placeholder="Meeting Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                            <div class="validate"></div>
+                                            </div>
                                         </div>
                                         <div class="form-row">
-                                            <div class="form-group col-md-12"><label class="text-dark" for="inputTopic">Topic</label><input class="form-control py-4" id="inputTopic" name="inputTopic" type="text" placeholder="Your topic" data-toggle="tooltip" data-placement="bottom" title="" data-trigger="manual" data-html="true" /></div>
-
+                                            <div class="form-group col-md-12"><label class="text-dark" for="inputTopic">Topic</label><input class="form-control py-4" id="inputTopic" name="inputTopic" type="text" placeholder="Your topic" data-toggle="tooltip" data-placement="bottom" title="" data-trigger="manual" data-html="true"  data-rule="required" data-msg="Enter meeting topic"/>
+                                            <div class="validate"></div>
+                                            </div>
+                                            
                                         </div>
                                         <div class="form-row">
-                                            <div class="form-group col-md-6"><label class="text-dark" for="inputPassword">Password</label><input class="form-control py-4" id="inputPassword" name="inputPassword" type="text" placeholder="BBB9876" /></div>
+                                            <div class="form-group col-md-6"><label class="text-dark" for="inputPassword">Password</label><input class="form-control py-4" id="inputPassword" name="inputPassword" type="text" placeholder="BBB9876" data-rule="required" data-msg="Please enter password" />
+                                            <div class="validate"></div>
+                                            </div>
 
-                                            <div class="form-group col-md-6"><label class="text-dark" for="inputDate">Date</label><input class="form-control py-4" id="date" name="date" type="date" min="<?php echo date("Y-m-d"); ?>" /></div>
+                                            <div class="form-group col-md-6"><label class="text-dark" for="inputDate">Date</label><input class="form-control py-4" id="date" name="date" type="date" min="<?php date_default_timezone_set("Europe/London"); echo date("Y-m-d"); ?>" data-rule="required" data-msg="Please enter date"/>
+                                            <div class="validate"></div>
+                                            </div>
                                             <!-- <script type="text/javascript">
                                                 $(function() {
                                                     var dtToday = new Date();
@@ -482,7 +519,9 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
                                             <div class="col-md-6">
                                                 <div class="form-row">
                                                     <label class="text-dark col-md-12" for="inputTime">Time</label>
-                                                    <div class="form-group col-md-12"><input type="time" class="form-control py-4" name="inputTime" id="inputTime"></div>
+                                                    <div class="form-group col-md-12"><input type="time" class="form-control py-4" name="inputTime" id="inputTime">
+                                                    <div class="time-valid validate"></div>
+                                                    </div>
                                                 </div>
                                             </div>
 
@@ -498,7 +537,7 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
                                                     <div class="form-group col-md-6"><select class="form-control" style="height:3.125rem; padding:0.5rem 0.7rem;" name="num_minutes" id="num_minutes">
                                                             <option selected disabled>Minutes</option>
                                                         </select></div>
-
+                                                    <div class="duration-valid validate" style="margin-top:-16px; margin-left:5px;"></div>
                                                 </div>
                                             </div>
 
@@ -506,7 +545,15 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
 
 
 
-                                        <div class="form-group"><label class="text-dark" for="inputAttendees">Attendees</label><textarea class="form-control py-3" id="inputAttendees" name="inputAttendees" type="text" placeholder="Enter a comma separated list of email ids" rows="3"></textarea></div>
+                                        <div class="form-group"><label class="text-dark" for="inputAttendees">Attendees</label><textarea class="form-control py-3" id="inputAttendees" name="inputAttendees" type="text" placeholder="Enter a comma separated list of email ids" rows="3"></textarea>
+                                        <div class="valid-attend validate"></div>
+                                        </div>
+                                        
+                                        <div class="form-group"><label class="text-dark" for="smsinvite">SMS Invite</label><input class="form-control py-3" id="smsinvite" type="tel"/>
+                                        <div class="validate valid-phone"></div>
+                                        </div>
+                                        
+                                        
 
 
                                     </div>
@@ -520,20 +567,36 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
                     <script>
                     
                         $("#inputTopic").on('keyup change input', function(event) {
-                            meeting = $("#inputTopic").val();
+                            meeting = $(this).val();
                             var specials = /[?&:'"%#]/;
                             if (specials.test(meeting)) {
                                 meeting = meeting.replace(/[ ?&:'"%#.]/g, "");
-                                $("#inputTopic").val(meeting);
+                                $(this).val(meeting);
                                 var text = "<i class='fa fa-info-circle info'></i> Meeting name should not contain any of these characters: ?, &, :, ', &quot;, %, #";
                                 var text = text.replace(/&quot;/g, '\"');
-                                $("#inputTopic").attr('data-original-title', text).tooltip('show');
+                                $(this).attr('data-original-title', text).tooltip('show');
                                 
                             } 
                             
                         });
                         $("#inputTopic").on('blur',function() {
-                                $("#inputTopic").tooltip('hide');
+                                $(this).tooltip('hide');
+                            });
+                        
+                        
+                        
+                         var telInput = $("#smsinvite");
+                            telInput.intlTelInput({
+                                utilsScript: "intl-tel-input/build/js/utils.js",
+                                preferredCountries: ["in", "us"],
+                                separateDialCode: true,
+                                initialCountry: "auto",
+                                geoIpLookup: function(success, failure) {
+                                    $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+                                        var countryCode = (resp && resp.country) ? resp.country : "";
+                                        success(countryCode);
+                                    });
+                                }
                             });
 
                     </script>
@@ -576,7 +639,7 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
                                     var text = text.replace(/&quot;/g, '\"');
                                     $("#join").attr('data-original-title', text).tooltip('show');
                                 } else {
-                                    var link = "https://hostcommservers.com/hostcomm/join/" + $("#join").val();
+                                    var link = "https://hostcommservers.com/join/" + $("#join").val();
                                     window.location.href = link;
                                 }
 
@@ -725,28 +788,50 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <div class="modal-body">
+                                    <div class="modal-body reschedule-form">
 
                                         <div class="form-row">
                                             <input type="hidden" name="uniqid" id="uniqid" value='<?php echo "$dbmuniq"; ?>'>
-                                            <div class="form-group col-md-6"><label class="text-dark" for="meetingName">Meeting Name</label><input class="form-control py-4" id="meetingName" name="meetingName" type="text" disabled /></div>
+                                            <div class="form-group col-md-6"><label class="text-dark" for="meetingName">Meeting Name</label><input class="form-control py-4" id="meetingName" name="meetingName" placeholder="Meeting Name" type="text" data-rule="minlen:4" data-msg="Please enter at least 4 chars" disabled />
+                                            <div class="validate"></div>
+                                            </div>
 
-                                            <div class="form-group col-md-6"><label class="text-dark" for="topic">Topic</label><input class="form-control py-4" id="topic" name="topic" type="text" disabled /></div>
+                                            <div class="form-group col-md-6"><label class="text-dark" for="topic">Topic</label><input class="form-control py-4" id="topic" name="topic" type="text" placeholder="Your topic"  data-toggle="tooltip" data-placement="bottom" title="" data-trigger="manual" data-html="true"  data-rule="required" data-msg="Enter meeting topic" disabled />
+                                            <div class="validate"></div>
+                                            </div>
                                         </div>
 
                                         <div class="form-row">
-                                            <div class="form-group col-md-6"><label class="text-dark" for="Password">Password</label><input class="form-control py-4" id="password" name="password" type="text" disabled /></div>
+                                            <div class="form-group col-md-6"><label class="text-dark" for="Password">Password</label><input class="form-control py-4" id="password" name="password" type="text" placeholder="BBB9876" data-rule="required" data-msg="Please enter password" disabled />
+                                            <div class="validate"></div>
+                                            </div>
 
-                                            <div class="form-group col-md-6"><label class="text-dark" for="Date">Date</label><input class="form-control py-4" id="schedule_date" name="schedule_date" type="date" disabled /></div>
+                                            <div class="form-group col-md-6"><label class="text-dark" for="Date">Date</label><input class="form-control py-4" id="schedule_date" name="schedule_date" type="date" min="<?php date_default_timezone_set("Europe/London"); echo date("Y-m-d"); ?>" data-rule="required" data-msg="Please enter date" disabled />
+                                            <div class="validate"></div>
+                                            </div>
                                         </div>
 
                                         <div class="form-row">
-                                            <div class="form-group col-md-6"><label class="text-dark" for="time">Time</label><input class="form-control py-4" id="schedule_time" name="schedule_time" type="time" disabled /></div>
+                                            <div class="form-group col-md-6"><label class="text-dark" for="time">Time</label><input class="form-control py-4" id="schedule_time" name="schedule_time" type="time" disabled />
+                                            <div class="time-res validate"></div>
+                                            </div>
 
-                                            <div class="form-group col-md-6"><label class="text-dark" for="duration">Duration(Minutes)</label><input class="form-control py-4" id="schedule_duration" name="schedule_duration" type="text" disabled /></div>
+                                            <div class="form-group col-md-6"><label class="text-dark" for="duration">Duration(Minutes)</label><input class="form-control py-4" id="schedule_duration" name="schedule_duration" type="text" placeholder="Duration in minutes" data-rule="required" data-msg="Please enter duration" disabled />
+                                            <div class="validate"></div>
+                                            </div>
                                         </div>
 
-                                        <div class="form-group"><label class="text-dark" for="inputAttendees">Attendees</label><textarea class="form-control py-3" id="inputAttendes" name="inputAttendes" type="text" rows="3" disabled></textarea></div>
+                                        <div class="form-group"><label class="text-dark" for="inputAttendees">Attendees</label><textarea class="form-control py-3" id="inputAttendes" name="inputAttendes" type="text" rows="3" placeholder="Enter a comma separated list of email ids" rows="3" data-rule="required" data-msg="Please enter atleast one email id" disabled></textarea>
+                                        <div class="validate"></div>
+                                        </div>
+                                        
+                                        
+                                        <label class="text-dark" for="meetsms">SMS Invite</label>
+                                        <div class="form-row">
+                                         <div class="form-group col-md-8"><input class="form-control py-4" id="meetsms" name="meetsms" type="text" disabled /></div>
+                                            
+                                            <div class="form-group col-md-4"><button type='button' class='btn btn-primary w-100' style="padding:12px;" id='sendsms' onclick="sendsms();"><i class="mr-2" data-feather="send"></i> Send SMS</button></div>    
+                                        </div>
 
 
                                     </div>
@@ -755,10 +840,10 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
                                          if($dbrole=="USER"){
                                             echo "<button type='button' class='btn btn-success' id='joinmeeting' onclick='joinmeeting();'>Join Meeting</button>";
                                          }else{
-                                            echo "<button type='button' class='btn btn-success' id='reschedule_1' onclick='validateresc();'>Reschedule Meeting</button>";
-                                            echo "<button type='button' class='btn btn-success' id='save_1' onclick='savemeeting();' hidden>Save Meeting</button>";
-                                            echo "<button type='button' class='btn btn-success' id='joinmeeting' onclick='joinmeeting();'>Join Meeting</button>";
-                                            echo "<button type='button' class='btn btn-danger' id='cancel_schedule_1' onclick='meetcancel();'>Cancel Meeting</button>";
+                                            echo "<button type='button' class='btn btn-success' id='reschedule_1' onclick='validateresc();'>Reschedule</button>";
+                                            echo "<button type='button' class='btn btn-success' id='save_1' onclick='savemeeting();' hidden>Save</button>";
+                                            echo "<button type='button' class='btn btn-success' id='joinmeeting' onclick='joinmeeting();'>Join</button>";
+                                            echo "<button type='button' class='btn btn-danger' id='cancel_schedule_1' onclick='meetcancel();'>Cancel</button>";
 
                                          }
                                         ?>
@@ -777,6 +862,27 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
 
                 </div>
             </main>
+             <script>
+                    
+                        $("#topic").on('keyup change input', function(event) {
+                            meeting = $(this).val();
+                            var specials = /[?&:'"%#]/;
+                            if (specials.test(meeting)) {
+                                meeting = meeting.replace(/[ ?&:'"%#.]/g, "");
+                                $(this).val(meeting);
+                                var text = "<i class='fa fa-info-circle info'></i> Meeting name should not contain any of these characters: ?, &, :, ', &quot;, %, #";
+                                var text = text.replace(/&quot;/g, '\"');
+                                $(this).attr('data-original-title', text).tooltip('show');
+                                
+                            } 
+                            
+                        });
+                        $("#topic").on('blur',function() {
+                                $(this).tooltip('hide');
+                            });
+            </script>
+            
+            
             <footer class="footer mt-auto footer-light">
                 <div class="container-fluid">
                     <div class="row">
@@ -796,9 +902,6 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="assets/demo/chart-area-demo.js"></script>
-    <script src="assets/demo/chart-bar-demo.js"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
     <script src="assets/demo/datatables-demo.js"></script>

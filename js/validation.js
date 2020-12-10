@@ -1,27 +1,119 @@
 
 function createaccount(){
+    
+    
+    var f = $("#create_account").find('.form-group'),
+      ferror = false,
+      emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+
+    f.children('input').each(function() { // run all inputs
+
+      var i = $(this); // current input
+      var rule = i.attr('data-rule');
+
+      if (rule !== undefined) {
+        var ierror = false; // error flag for current input
+        var pos = rule.indexOf(':', 0);
+        if (pos >= 0) {
+          var exp = rule.substr(pos + 1, rule.length);
+          rule = rule.substr(0, pos);
+        } else {
+          rule = rule.substr(pos + 1, rule.length);
+        }
+
+        switch (rule) {
+          case 'required':
+            if (i.val() === '') {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'minlen':
+            if (i.val().length < parseInt(exp)) {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'email':
+            if (!emailExp.test(i.val())) {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'checked':
+            if (!i.attr('checked')) {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'regexp':
+            exp = new RegExp(exp);
+            if (!exp.test(i.val())) {
+              ferror = ierror = true;
+            }
+            break;
+        }
+        i.next('.validate').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+      }
+    });
+    f.children('textarea').each(function() { // run all inputs
+
+      var i = $(this); // current input
+      var rule = i.attr('data-rule');
+
+      if (rule !== undefined) {
+        var ierror = false; // error flag for current input
+        var pos = rule.indexOf(':', 0);
+        if (pos >= 0) {
+          var exp = rule.substr(pos + 1, rule.length);
+          rule = rule.substr(0, pos);
+        } else {
+          rule = rule.substr(pos + 1, rule.length);
+        }
+
+        switch (rule) {
+          case 'required':
+            if (i.val() === '') {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'minlen':
+            if (i.val().length < parseInt(exp)) {
+              ferror = ierror = true;
+            }
+            break;
+        }
+        i.next('.validate').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+      }
+    });
+    
+    
+    
+    var mobile=telInput.intlTelInput("getNumber");
+  if ($.trim(telInput.val()) || $("#inputMobile").val() == "") {
+     if (!telInput.intlTelInput("isValidNumber") || $("#inputMobile").val() == "") {
+    console.log(telInput.intlTelInput("getValidationError"));
+         $(".valid-phone").html("Please enter a valid phone number");
+         ferror=true;
+        }
+    else {
+        $(".valid-phone").html("");
+    }}
+    
+   if (ferror) return false;
+    else { 
+    
 
   var fname=document.getElementById("inputFirstName").value;
   var lname=document.getElementById("inputLastName").value;
   var email=document.getElementById("inputEmailAddress").value;
-    var mobile = telInput.intlTelInput("getNumber");
+   
   var pass=document.getElementById("inputPassword").value;
   var conpass=document.getElementById("inputConfirmPassword").value;
 
-  if(fname=="" || lname =="" || email=="" || pass=="" || conpass==""|| mobile==""){
-    alert("Please fill all the details");
-    document.getElementById("inputFirstName").value="";
-    document.getElementById("inputLastName").value="";
-    document.getElementById("inputEmailAddress").value="";
-    document.getElementById("inputMobile").value = "";
-    document.getElementById("inputPassword").value="";
-    document.getElementById("inputConfirmPassword").value="";
-  }
-  else
-  {
-
   if(pass!=conpass){
-    alert("Passwords dosent match");
+    alert("Passwords does'nt match");
     document.getElementById("inputPassword").value="";
         document.getElementById("inputConfirmPassword").value="";
   }else{
@@ -414,51 +506,214 @@ jQuery.ajax({
 }
 
 function createmeeting(){
+    
+    var f = $("#meeting_create").find('.form-group'),
+      ferror = false,
+      emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+
+    f.children('input').each(function() { // run all inputs
+
+      var i = $(this); // current input
+      var rule = i.attr('data-rule');
+
+      if (rule !== undefined) {
+        var ierror = false; // error flag for current input
+        var pos = rule.indexOf(':', 0);
+        if (pos >= 0) {
+          var exp = rule.substr(pos + 1, rule.length);
+          rule = rule.substr(0, pos);
+        } else {
+          rule = rule.substr(pos + 1, rule.length);
+        }
+
+        switch (rule) {
+          case 'required':
+            if (i.val() === '') {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'minlen':
+            if (i.val().length < parseInt(exp)) {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'email':
+            if (!emailExp.test(i.val())) {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'checked':
+            if (!i.attr('checked')) {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'regexp':
+            exp = new RegExp(exp);
+            if (!exp.test(i.val())) {
+              ferror = ierror = true;
+            }
+            break;
+        }
+        i.next('.validate').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+      }
+    });
+    f.children('textarea').each(function() { // run all inputs
+
+      var i = $(this); // current input
+      var rule = i.attr('data-rule');
+
+      if (rule !== undefined) {
+        var ierror = false; // error flag for current input
+        var pos = rule.indexOf(':', 0);
+        if (pos >= 0) {
+          var exp = rule.substr(pos + 1, rule.length);
+          rule = rule.substr(0, pos);
+        } else {
+          rule = rule.substr(pos + 1, rule.length);
+        }
+
+        switch (rule) {
+          case 'required':
+            if (i.val() === '') {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'minlen':
+            if (i.val().length < parseInt(exp)) {
+              ferror = ierror = true;
+            }
+            break;
+        }
+        i.next('.validate').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+      }
+    });
+    
+    
+    
+  var meethour=document.getElementById("num_hours").value;
+  var meetmin=document.getElementById("num_minutes").value;
+  if((meethour== "00 hrs" && meetmin=="00 mins") || (meethour=="Hours" || meetmin=="Minutes")){
+   ferror=true;
+      $(".duration-valid").html("Enter valid meeting duration");
+  } else {
+      $(".duration-valid").html("");
+  }
+    
+    
+    var meetsms=telInput.intlTelInput("getNumber");
+  if ($.trim(telInput.val()) || $("#smsinvite").val() == "") {
+     if (!telInput.intlTelInput("isValidNumber") || $("#smsinvite").val() == "") {
+    console.log(telInput.intlTelInput("getValidationError"));
+         $(".valid-phone").html("Please enter a valid phone number");
+         ferror=true;
+        }
+    else {
+        $(".valid-phone").html("");
+    }}
+    
+    
+    var meettdate=document.getElementById("date").value;
+    var meettime=document.getElementById("inputTime").value;
+    if(meettdate==""){
+        $(".time-valid").html("Please enter date first");
+        ferror=true;
+    }
+    else if(meettime==""){
+        $(".time-valid").html("Please enter time of meeting");
+        ferror=true;
+    }
+    else{
+        var date = new Date($('#date').val());
+  day = date.getDate();
+        
+    var curr_date = new Date($('#date').attr('min'));
+        dayc = curr_date.getDate();
+        if(day==dayc){
+            var time = $('#inputTime').val().split(':');
+    var hh = time[0];
+    var mm = time[1];
+            
+            var d = new Date();
+var n = d.getTimezoneOffset();//for uk
+var ans = new Date(d.getTime() + n * 60 * 1000);
+
+            
+            var curr_hh=ans.getHours();
+            var curr_mm=ans.getMinutes();
+            
+            if(hh<curr_hh || (hh==curr_hh && mm<curr_mm)){
+                $(".time-valid").html("Enter a valid time");
+                ferror=true;
+            
+        } else
+            $(".time-valid").html("");
+        
+    } else
+            $(".time-valid").html("");
+    
+    }
+    
+    
+    
+    
+    
+    //attendees
+    var meetatten=document.getElementById("inputAttendees").value;
+    if(meetatten===""){
+        $(".valid-attend").html("Please enter atleast one email");
+        ferror=true;
+    }
+    else{
+        
+        if(meetatten.indexOf(",")===-1 && !emailExp.test(meetatten)){
+                $(".valid-attend").html("Please enter a valid email <br> Note : No spaces are allowed");
+                ferror=true;
+        }
+        else{
+            var res=meetatten.split(",");
+            var c="";
+            for(i=0;i<res.length;i++){
+                if(!emailExp.test(res[i]))
+                    c+=(i+1)+",";
+            }
+            if(c!=""){
+                c=c.substring(0, c.length-1);
+                $(".valid-attend").html("Please enter valid emails : "+c+"<br> Note : No spaces are allowed");
+                ferror=true;
+            }
+            else
+                $(".valid-attend").html("");
+        }
+        
+    }
+    
+    
+    
+    
+    
+    if (ferror) return false;
+    else {
+    
 
   var meetname=document.getElementById("inputName").value;
   var meettop=document.getElementById("inputTopic").value;
   var meettpass=document.getElementById("inputPassword").value;
-  var meettdate=document.getElementById("date").value;
-  var meettime=document.getElementById("inputTime").value;
-  var meethour=document.getElementById("num_hours").value;
-  var meetmin=document.getElementById("num_minutes").value;
-  var meetatten=document.getElementById("inputAttendees").value;
+  
+  
   
   var hours=parseInt(meethour.split(" "));
   var min=parseInt(meetmin.split(" "));
+  
+  
+  
+
 
   
-  var flag=0;
-  // if(meethour== "00 hrs" && meetmin=="00 mins"){
-  //  flag=0;
-  // }else if(meethour=="Hours" && meetmin=="Minutes"){
-  //   flag=0;
-  // }else if(hours>=1 && meetmin<=50){
-  //   flag=1;
-  // }else{
-  //   flag=1;
-  // }
-
-  if((meethour== "00 hrs" && meetmin=="00 mins") && (meethour=="Hours" && meetmin=="Minutes")){
-   flag=0;
-  }else{
-    if((hours>=1 && min<=50) || (hours<=23 && min>=1)){
-      flag=1;
-    }
-  }
-
-
-  if(meetname=="" || meettop=="" || meettpass=="" || meettdate=="" || meettime=="" || meetatten=="" || flag==0){
-    alert("Please fill all details or check for meeting duration");
-    document.getElementById("inputName").value="";
-    document.getElementById("inputTopic").value="";
-    document.getElementById("inputPassword").value="";
-    document.getElementById("date").value="";
-    document.getElementById("inputTime").value="";
-    document.getElementById("num_hours").value="";
-    document.getElementById("num_minutes").value="";
-    document.getElementById("inputAttendees").value="";
-  }else{
    
    var datetime=meettdate + ' ' + meettime + ':00';
 
@@ -473,7 +728,7 @@ function createmeeting(){
     type: "POST",
     url: 'controller/meetingregistration.php',
     dataType: 'json',
-    data: {functionname: 'meetingsub', arguments: [meetname,meettop,meettpass,datetime,minut,meetatten]},
+    data: {functionname: 'meetingsub', arguments: [meetname,meettop,meettpass,datetime,minut,meetatten,meetsms]},
 
     success: function (data, textstatus) 
     {
@@ -498,8 +753,8 @@ function createmeeting(){
                   
     }
   });
-  }
-}
+  
+}}
 
 function validateresc(){
 
@@ -509,34 +764,157 @@ function validateresc(){
   document.getElementById("schedule_date").disabled=false;
   document.getElementById("schedule_time").disabled=false;
   document.getElementById("schedule_duration").disabled=false;
-  document.getElementById("inputAttendes").disabled=false;
   document.getElementById("reschedule_1").hidden=true;
   document.getElementById("save_1").hidden=false;
   
 }
 
 function savemeeting(){
-  // var meetname=meetingName;
-  // var meettop=topic;
-  // var meettpass=password;
-  // var meettdate=schedule_date;
-  // var meettime=schedule_time;
-  // var meethour=schedule_duration;
-  // var meetatten=inputAttendees;
-  // var uniqid=uniqid;
+  
+    
+    
+    var f = $(".reschedule-form").find('.form-group'),
+      ferror = false,
+      emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+
+    f.children('input').each(function() { // run all inputs
+
+      var i = $(this); // current input
+      var rule = i.attr('data-rule');
+
+      if (rule !== undefined) {
+        var ierror = false; // error flag for current input
+        var pos = rule.indexOf(':', 0);
+        if (pos >= 0) {
+          var exp = rule.substr(pos + 1, rule.length);
+          rule = rule.substr(0, pos);
+        } else {
+          rule = rule.substr(pos + 1, rule.length);
+        }
+
+        switch (rule) {
+          case 'required':
+            if (i.val() === '') {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'minlen':
+            if (i.val().length < parseInt(exp)) {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'email':
+            if (!emailExp.test(i.val())) {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'checked':
+            if (!i.attr('checked')) {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'regexp':
+            exp = new RegExp(exp);
+            if (!exp.test(i.val())) {
+              ferror = ierror = true;
+            }
+            break;
+        }
+        i.next('.validate').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+      }
+    });
+    f.children('textarea').each(function() { // run all inputs
+
+      var i = $(this); // current input
+      var rule = i.attr('data-rule');
+
+      if (rule !== undefined) {
+        var ierror = false; // error flag for current input
+        var pos = rule.indexOf(':', 0);
+        if (pos >= 0) {
+          var exp = rule.substr(pos + 1, rule.length);
+          rule = rule.substr(0, pos);
+        } else {
+          rule = rule.substr(pos + 1, rule.length);
+        }
+
+        switch (rule) {
+          case 'required':
+            if (i.val() === '') {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'minlen':
+            if (i.val().length < parseInt(exp)) {
+              ferror = ierror = true;
+            }
+            break;
+        }
+        i.next('.validate').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+      }
+    });
+    
+    
+    var meettdate=document.getElementById("schedule_date").value;
+  var meettime=document.getElementById("schedule_time").value;
+    if(meettdate==""){
+        $(".time-res").html("Please enter date first");
+        ferror=true;
+    }
+    else if(meettime==""){
+        $(".time-res").html("Please enter time of meeting");
+        ferror=true;
+    }
+    else{
+        var date = new Date($('#schedule_date').val());
+  day = date.getDate();
+        
+    var curr_date = new Date($('#schedule_date').attr('min'));
+        dayc = curr_date.getDate();
+        if(day==dayc){
+            var time = $('#schedule_time').val().split(':');
+    var hh = time[0];
+    var mm = time[1];
+            
+            var d = new Date();
+var n = d.getTimezoneOffset();
+var ans = new Date(d.getTime() + n * 60 * 1000);
+
+            
+            var curr_hh=ans.getHours();
+            var curr_mm=ans.getMinutes();
+            
+            if(hh<curr_hh || (hh==curr_hh && mm<curr_mm)){
+                $(".time-res").html("Enter a valid time");
+                ferror=true;
+            } else
+            $(".time-res").html("");
+            
+        } else
+            $(".time-res").html("");
+        
+    }
+    
+    
+    
+    if (ferror) return false;
+    else {
+
+       
   var meetname=document.getElementById("meetingName").value;
   var meettop=document.getElementById("topic").value;
   var meettpass=document.getElementById("password").value;
-  var meettdate=document.getElementById("schedule_date").value;
-  var meettime=document.getElementById("schedule_time").value;
+  
   var meethour=document.getElementById("schedule_duration").value;
-  var meetatten=document.getElementById("inputAttendes").value;
   var uniqid=document.getElementById("uniqid").value;
 
   //var hours=parseInt(meethour.split(" "));
-  if(meetname=="" || meettop=="" || meettpass=="" || meettdate=="" || meettime=="" || meetatten=="" || meethour==""){
-    alert("Please fill all details");
-  }else{
+  
      var datetime=meettdate + ' ' + meettime;
 
      var minut=parseInt(meethour);
@@ -545,7 +923,7 @@ function savemeeting(){
     type: "POST",
     url: 'controller/meetingregistration.php',
     dataType: 'json',
-    data: {functionname: 'meetingupdate', arguments: [uniqid,meetname,meettop,meettpass,datetime,minut,meetatten]},
+    data: {functionname: 'meetingupdate', arguments: [uniqid,meetname,meettop,meettpass,datetime,minut]},
 
     success: function (data, textstatus) 
     {
@@ -571,8 +949,8 @@ function savemeeting(){
     }
   });
 
-  }
-}
+  
+}}
 
 function fetchdata(uniqid){
 var uniqu=uniqid;
@@ -608,7 +986,7 @@ if(uniqu!=""){
                       document.getElementById("schedule_time").value=schedule_date[1];
                       document.getElementById("schedule_duration").value=data.result[0].mduration;
                       document.getElementById("uniqid").value=uniqu;
-                                           
+                      document.getElementById("meetsms").value=data.result[0].msms;                   
                   }
 
                   
@@ -626,8 +1004,12 @@ function joinmeeting(){
 
 function meetcancel(){
   var uniqud=document.getElementById("uniqid").value;
-  alert("Sure you want to cancel meeting?");
-
+  //alert("Sure you want to cancel meeting?");
+    
+    
+var r = confirm("Sure you want to cancel meeting?");
+  if (r == true) {
+      
   jQuery.ajax({
     type: "POST",
     url: 'controller/meetingregistration.php',
@@ -656,11 +1038,39 @@ function meetcancel(){
                   
     }
   });
+      }
+
 }
 
 function loadmeets(){
 
 }
+
+function sendsms(){
+    var topic=$("#topic").val();
+    var uniq=$("#uniqid").val();
+    var mobile=$("#meetsms").val();
+    var time=$("#schedule_time").val();
+    var date=$("#schedule_date").val();
+    var pass=$("#pass").val();
+    
+    jQuery.ajax({
+    type: "POST",
+    url: 'controller/meetingregistration.php',
+    dataType: 'json',
+    data: {functionname: 'sendsms', arguments: [topic,uniq,mobile,time,date,pass]},
+
+    success: function (data, textstatus) 
+    {
+                  if(('error' in data) )     
+                      alert(data.error);
+           else 
+                 alert("SMS sent.");
+    }
+  });
+}
+
+
 
 function logout(){
   jQuery.ajax({

@@ -45,7 +45,7 @@ require_once('../database/database.php');
                     if(($con->getNumRows($result) == 0))
           {
               $pass=password_hash($pass, PASSWORD_DEFAULT);
-                      $my_query = "INSERT INTO d_registration (fname, lname, uemail, upassword, urole, phone) VALUES ('$fname','$lname', '$email', '$pass', 'USER', '$mobile')";
+                      $my_query = "INSERT INTO d_registration (fname, lname, uemail, upassword, urole, avatar, phone) VALUES ('$fname','$lname', '$email', '$pass', 'USER', 'upload/18354578.jpg', '$mobile')";
                      
 
                    $resultins = $con->query($my_query);

@@ -84,7 +84,7 @@
   let targetAnchor = $('[href="' + activatedPath + '"]');
   let collapseAncestors = targetAnchor.parents('.collapse');
   
-  targetAnchor.addClass('active');
+ // targetAnchor.addClass('active');
   
   collapseAncestors.each(function() {
     $(this).addClass('show');

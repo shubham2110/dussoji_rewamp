@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--
+********************************************
+Version: 1.0
+Name: Hostcomm Support Main User Dashboard
+Developed By: www.impactcart.in
+All Rights & License Reserved by Damodar IT Solutions Pvt. Ltd.
+Author: Shyam Shanbhag
+Contact: shyam@ditsolutions.net
+Deployed for: www.hostcommservers.com
+********************************************
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>User Sign-up - Hostcomm Video</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/img/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="assets/img/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="assets/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="assets/img/favicon-128.png" sizes="128x128" />
+
+    <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.27.0/feather.min.js" crossorigin="anonymous"></script>
+    <script src="js/validation.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="intl-tel-input/build/js/intlTelInput-jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="intl-tel-input/build/css/intlTelInput.css">
+</head>
+
+     <style>
+    .iti {
+        display: block !important;
+    }
+         .validate{
+        color: red;
+    font-weight: 400;
+    font-size: 13px;
+    }
+    </style>
+    
+<body class="bg-primary">
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
+            <main>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7">
+                            <!-- Basic registration form-->
+                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                <div class="card-header justify-content-center">
+                                    <h2 class="page-header-title my-2 text-center">Create an Account</h2>
+                                </div>
+                                <div class="card-body">
+                                    <!-- Registration form-->
+                                    <form method="post" role="form" id="create_account">
+                                        <!-- Form Row-->
+                                        <div class="form-row">
+                                            
+                                                <!-- Form Group (first name)-->
+                                                <div class="form-group col-md-6">
+                                                    <label class="small mb-1" for="inputFirstName">First Name</label>
+                                                    <input class="form-control py-4" id="inputFirstName" type="text" placeholder="Enter first name" name="inputFirstName" data-rule="required" data-msg="Please enter first name"/>
+                                                    <div class="validate"></div>
+                                                </div>
+                                            
+                                            
+                                                <!-- Form Group (last name)-->
+                                                <div class="form-group col-md-6">
+                                                    <label class="small mb-1" for="inputLastName">Last Name</label>
+                                                    <input class="form-control py-4" id="inputLastName" type="text" placeholder="Enter last name" name="inputLastName" data-rule="required" data-msg="Please enter last name"/>
+                                                    <div class="validate"></div>
+                                                </div>
+                                            
+                                        </div>
+                                        <!-- Form Row    -->
+                                        <div class="form-row">
+                                            
+                                                <!-- Form Group (email address) -->
+                                                <div class="form-group col-md-6">
+                                                    <label class="small mb-1" for="inputEmailAddress">Email</label>
+                                                    <input class="form-control py-4" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Enter email address" data-rule="email" data-msg="Please enter valid email"/>
+                                                    <div class="validate"></div>
+                                                
+                                            </div>
+                                                
+                                                    <!-- Form Group (Mobile Number)-->
+                                                    <div class="form-group col-md-6">
+                                                        <label class="small mb-1" for="inputMobile">Mobile Number</label>
+                                                        <input class="form-control py-4" id="inputMobile" type="tel"/>
+                                                        <input type="hidden" name="mobilefull" id="mobilefull" />
+                                                        <div class="valid-phone validate"></div>
+                                                    </div>
+                                                
+                                            </div>
+                                        <!-- Form Row    -->
+                                        <div class="form-row">
+                                            
+                                                <!-- Form Group (password)-->
+                                                <div class="form-group col-md-6">
+                                                    <label class="small mb-1" for="inputPassword">Password</label>
+                                                    <input class="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" data-rule="required" data-msg="Please enter your password"/>
+                                                    <div class="validate"></div>
+                                                </div>
+                                            
+                                            
+                                                <!-- Form Group (confirm password)-->
+                                                <div class="form-group col-md-6">
+                                                    <label class="small mb-1" for="inputConfirmPassword">Confirm Password</label>
+                                                    <input class="form-control py-4" id="inputConfirmPassword" type="password" placeholder="Confirm password" data-rule="required" data-msg="Please enter confirm password"/>
+                                                    <div class="validate"></div>
+                                                </div>
+                                            
+                                        </div>
+                                        <!-- Form Group (create account submit)-->
+                                        <div class="form-group mt-4 mb-0"><a class="btn btn-primary btn-block" onclick="createaccount();">Create Account</a></div>
+                                    </form>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <div class="small"><a href="auth-login-basic.html">Have an account? Go to login</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                var telInput = $("#inputMobile");
+                            telInput.intlTelInput({
+                                utilsScript: "intl-tel-input/build/js/utils.js",
+                                preferredCountries: ["in", "us"],
+                                separateDialCode: true,
+                                initialCountry: "auto",
+                                geoIpLookup: function(success, failure) {
+                                    $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+                                        var countryCode = (resp && resp.country) ? resp.country : "";
+                                        success(countryCode);
+                                    });
+                                }
+                            });
+
+                </script>
+                
+            </main>
+        </div>
+        <div id="layoutAuthentication_footer">
+            <footer class="footer mt-auto footer-dark">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 small">&copy; 2020, <span>Dussoji Video</span>. All Rights Reserved<br>Made with ❤ by <a href="https://dussoji.com"><span>Dussoji</span></a>, a BestBookBuddies service<br> Powered by <a href="https://bestbookbuddies.com" target="_blank"><span>BestBook Buddies Technologies Pvt. Ltd.</span></a></div>
+                        <!-- <div class="col-md-6 small">Copyright &copy; Your Website 2020</div>-->
+                        <div class="col-md-6 text-md-right small">
+                            <a href="#!">Privacy Policy</a>
+                            &middot;
+                            <a href="#!">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+</body></html>

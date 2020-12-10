@@ -3,13 +3,12 @@
 <!--
 ********************************************
 Version: 1.0
-Name: Dussoji Video Conferencing Main User Dashboard
+Name: Hostcomm Support Main User Dashboard
 Developed By: www.impactcart.in
-All Rights & License Reserved by D IT Solutions
+All Rights & License Reserved by Damodar IT Solutions Pvt. Ltd.
 Author: Shyam Shanbhag
 Contact: shyam@ditsolutions.net
-Deployed for: www.dussoji.com
-Pre-Owned by: D IT Solutions (www.ditsolutions.net)
+Deployed for: www.hostcommservers.com
 ********************************************
 -->
 <html lang="en">
@@ -22,7 +21,20 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
     <meta name="author" content="" />
     <title>Join Webinar - Hostcomm Video</title>
     <link href="css/styles.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/img/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="assets/img/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="assets/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="assets/img/favicon-128.png" sizes="128x128" />
+
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
     <script src="js/validation.js"></script>
@@ -33,7 +45,7 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
     <nav class="topnav navbar navbar-expand shadow navbar-light bg-white" id="sidenavAccordion">
         <a class="navbar-brand" href="index.php"><img src="assets/img/log.png"></a>
         <button class="btn btn-icon btn-transparent-dark order-1 order-lg-0 mr-lg-2" id="sidebarToggle" href="#"><i data-feather="menu"></i></button>
-        <form class="form-inline mr-auto d-none d-md-block">
+        <form class="form-inline mr-auto d-none">
             <div class="input-group input-group-joined input-group-solid">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
                 <div class="input-group-append">
@@ -172,7 +184,7 @@ Pre-Owned by: D IT Solutions (www.ditsolutions.net)
                         <div class="dropdown-item-icon"><i data-feather="settings"></i></div>
                         Account
                     </a>
-                    <a class="dropdown-item" onclick="logout();" style="color: black;">
+                    <a class="dropdown-item" onclick="logout();" style="color: black;cursor:pointer;">
                         <div class="dropdown-item-icon"><i data-feather="log-out"></i></div>
                         Logout
                     </a>

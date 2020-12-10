@@ -149,24 +149,26 @@ function reset(){
           window.location.replace("/");
 }
 
+<?php if(true || "checkauth") { ?>
 function setauth(){
-	var username="";
+	var username="123456";
 
-	var authpass="";
+	var authpass="<?php echo hash('sha256', '123456'.'randomhashnotveryeasytofindhelloworldSurendrasingh'); ?>";
 
 	var id=username.concat('@hostcommservers.com');
 	
-	window.localStorage.setItem('xmpp_password_override1', authpass);
-	window.localStorage.setItem('xmpp_username_override1', id);
+	window.localStorage.setItem('xmpp_password_override', authpass);
+	window.localStorage.setItem('xmpp_username_override', id);
 	
 }
+<?php } ?>
 
 
 function resetlocal()
 {
         window.localStorage.setItem('sessionId', '');
-	window.localStorage.setItem('xmpp_password_override1', '');
-	window.localStorage.setItem('xmpp_username_override1', '');
+	window.localStorage.setItem('xmpp_password_override', '');
+	window.localStorage.setItem('xmpp_username_override', '');
  
 }
 
@@ -175,8 +177,8 @@ function resetauth(){
 	var authpass="wrongpassword";
 	var id=username.concat('@hostcommservers.com');
         window.localStorage.setItem('sessionId', '');
-	window.localStorage.setItem('xmpp_password_override1', '');
-	window.localStorage.setItem('xmpp_username_override1', '');
+	window.localStorage.setItem('xmpp_password_override', '');
+	window.localStorage.setItem('xmpp_username_override', '');
 
 }
 resetlocal();
