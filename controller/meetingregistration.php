@@ -1,7 +1,12 @@
-<?php  
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 session_start();
 require_once('../database/database.php');
-
+$date="";
+$time="";
  $aResult = array();
 
   if( !isset($_POST['functionname']) ) 
@@ -99,7 +104,7 @@ $senderId = "DAMSMS";
 
 //Your message to send, Add URL encoding here.
                    
-$mes='Please join Hostcomm Support on '.$date.' '.$time.' at
+$mes='Please join Hostcomm Support on '.$datetime.' at
 
 https://hostcommservers.com/hostcomm/join/'.$myuid.'  
 
@@ -140,7 +145,7 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 
 //get response
 $output = curl_exec($ch);
-$err;
+$err="";
 
 //Print error if any
 if(curl_errno($ch))
