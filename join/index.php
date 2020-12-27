@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +30,7 @@ html{
 </style>
 </head>
 <body>
-
+<?php if(isset($_POST['pass'])){ ?>
   <button class="btn-primary btn btn-md" style="visibility:hidden; position:absolute;" id="modal_btn" data-toggle="modal" data-target="#share_modal"><span class="glyphicon glyphicon-share-alt"></span></button>
 
 <div class="modal" id="share_modal">
@@ -52,7 +51,7 @@ html{
             <p "text-align:center">  Meeting ID: <?php echo($_GET['id']) ?>
           </div>
           <div class="row" style="padding-left:2%; padding-right:1%;">
-            <p "text-align:center">  Password: 1234
+            <p "text-align:center">  Password: <?php echo $_POST['pass']; ?>
           </div>
           <input type="hidden" name="share_details" id="share_details" value=" Meeting URL: https://hostcommservers.com/hostcomm/join/<?php echo($_GET['id']) ?> Meeting ID: <?php echo($_GET['id']) ?> Password: 1234">
         </div>
@@ -62,8 +61,7 @@ html{
       </div>
     </div>
   </div>
-<div class="row" style="width:100%; height:100%; text-align:center; padding:0; margin:0;" id="iframe_container">
-</div>
+
 
 <script>
 
@@ -86,8 +84,12 @@ function show_share_btn(){
 
 
 </script>
+<?php } ?>
 
-
+    
+    
+    <div class="row" style="width:100%; height:100%; text-align:center; padding:0; margin:0;" id="iframe_container">
+</div>
  <script>
 
 	 

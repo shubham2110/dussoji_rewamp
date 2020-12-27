@@ -977,16 +977,34 @@ if(uniqu!=""){
                   }
            else 
                    {
+                      var user=data.result[0].user;
+                      var host=data.result[0].host;
                       document.getElementById("meetingName").value=data.result[0].mname;
                       document.getElementById("topic").value=data.result[0].mtopic;
                       document.getElementById("password").value=data.result[0].mpass;
-                      document.getElementById("inputAttendes").value=data.result[0].mattend;
                       var schedule_date=data.result[0].mdatetime.split(" ");
                       document.getElementById("schedule_date").value=schedule_date[0];
                       document.getElementById("schedule_time").value=schedule_date[1];
                       document.getElementById("schedule_duration").value=data.result[0].mduration;
                       document.getElementById("uniqid").value=uniqu;
-                      document.getElementById("meetsms").value=data.result[0].msms;                   
+                       if(user==host){
+                      document.getElementById("meetsms").value=data.result[0].msms;
+                       document.getElementById("inputAttendes").value=data.result[0].mattend;
+                           $("#inputAttendes").parent().show();
+                           $("#meetsms").parent().parent().show();
+                           $("#reschedule_1").show();
+                           $("#save_1").show();
+                           $("#cancel_schedule_1").show();
+                           $("label[for='meetsms']").show();
+                       }
+                       else{
+                           $("#inputAttendes").parent().hide();
+                           $("#meetsms").parent().parent().hide();
+                           $("#reschedule_1").hide();
+                           $("#save_1").hide();
+                           $("#cancel_schedule_1").hide();
+                           $("label[for='meetsms']").hide();
+                       }                   
                   }
 
                   
@@ -995,12 +1013,7 @@ if(uniqu!=""){
 }
 }
 
-function joinmeeting(){
- var url="https://hostcommservers.com/hostcomm/join/";
- var uniqid= document.getElementById("uniqid").value;
- var finalurl=url+uniqid;
- window.open(finalurl);
-}
+
 
 function meetcancel(){
   var uniqud=document.getElementById("uniqid").value;
@@ -1042,9 +1055,7 @@ var r = confirm("Sure you want to cancel meeting?");
 
 }
 
-function loadmeets(){
 
-}
 
 function sendsms(){
     var topic=$("#topic").val();

@@ -23,7 +23,7 @@ Deployed for: www.hostcommservers.com
     <link href="css/styles.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet" crossorigin="anonymous" />
-    
+
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/apple-touch-icon-114x114.png" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/apple-touch-icon-72x72.png" />
@@ -38,15 +38,15 @@ Deployed for: www.hostcommservers.com
     <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="assets/img/favicon-128.png" sizes="128x128" />
 
-    
+
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
-    <script src="js/validation.js"></script>
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.27.0/feather.min.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-    
-     <script type="text/javascript" src="intl-tel-input/build/js/intlTelInput-jquery.min.js"></script>
+
+
+    <script type="text/javascript" src="intl-tel-input/build/js/intlTelInput-jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="intl-tel-input/build/css/intlTelInput.css">
 </head>
 
@@ -72,22 +72,22 @@ Deployed for: www.hostcommservers.com
         color: #e3a131;
         font-size: 15px;
     }
-    
-     .iti {
+
+    .iti {
         display: block !important;
     }
-    
-    .validate{
+
+    .validate {
         color: red;
-    font-weight: 400;
-    font-size: 13px;
+        font-weight: 400;
+        font-size: 13px;
     }
 
 </style>
 
 <body class="nav-fixed">
     <nav class="topnav navbar navbar-expand shadow navbar-light bg-white" id="sidenavAccordion">
-       <a class="navbar-brand" href="index.php"><img src="assets/img/log.png"></a>
+        <a class="navbar-brand" href="index.php"><img src="assets/img/log.png"></a>
         <button class="btn btn-icon btn-transparent-dark order-1 order-lg-0 mr-lg-2" id="sidebarToggle" href="#"><i data-feather="menu"></i></button>
         <form class="form-inline mr-auto d-none">
             <div class="input-group input-group-joined input-group-solid">
@@ -144,7 +144,7 @@ Deployed for: www.hostcommservers.com
                 </div>
             </li>
             <?php $email=$_SESSION["email"];$con=new DbConnector();$my_query="select * from d_registration where uemail like '$email'";$result = $con->query($my_query);if(($con->getNumRows($result) ==1)){$row=$con->fetchArray($result);$dbfname=$row['fname'];$dblname=$row['lname'];$uname="$dbfname $dblname";$dbbirth=$row['birthdate'];$dbmob=$row['phone'];$dborg=$row['orgname'];$dbgeo=$row['geoloc'];$dbavatar=$row['avatar'];$dbrole=$row['urole'];}?>
-        <!--    <li class="nav-item dropdown no-caret mr-sm-3 mr-2 dropdown-notifications">
+            <!--    <li class="nav-item dropdown no-caret mr-sm-3 mr-2 dropdown-notifications">
                 <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownAlerts" href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="bell"></i></a>
                 <div class="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownAlerts">
                     <h6 class="dropdown-header dropdown-notifications-header">
@@ -254,7 +254,7 @@ Deployed for: www.hostcommservers.com
                             <span class="badge badge-primary-soft text-primary ml-auto">Beta</span>
                         </a>
 
-                       
+
                         <nav class="nav accordion" id="accordionSidenavPagesMenu">
                             <a class="nav-link collapsed" href="javascript:void(0);" data-toggle="collapse" data-target="#pagesCollapseAccount" aria-expanded="false" aria-controls="pagesCollapseAccount">
                                 <div class="nav-link-icon"><i data-feather="user"></i></div>
@@ -267,7 +267,7 @@ Deployed for: www.hostcommservers.com
                                         Profile
                                         <span class="badge badge-primary-soft text-primary ml-auto">New</span>
                                     </a>
-                                    
+
                                     <a class="nav-link" href="account-security.php">
                                         Security
                                         <span class="badge badge-primary-soft text-primary ml-auto">New</span>
@@ -417,8 +417,8 @@ Deployed for: www.hostcommservers.com
                         </div>
                     </div>
                 </header>
-                
-               
+
+
                 <!-- Main page content-->
                 <div class="container mt-n10">
                     <div class="row">
@@ -437,7 +437,7 @@ Deployed for: www.hostcommservers.com
                                     </div>
                                 </div>
                                 <div class="card-footer bg-transparent px-5 py-4">
-                                    <div class="small text-center"><a class="btn btn-block btn-primary"  target="_blank" data-toggle="modal" data-target="#createvideo" style="<?php if($dbrole=="USER"){echo "pointer-events: none;
+                                    <div class="small text-center"><a class="btn btn-block btn-primary" target="_blank" data-toggle="modal" data-target="#createvideo" style="<?php if($dbrole=="USER"){echo "pointer-events: none;
         cursor: default;";}?>">Create new Meeting</a></div>
                                 </div>
                             </div>
@@ -479,22 +479,22 @@ Deployed for: www.hostcommservers.com
 
                                         <div class="form-row">
                                             <div class="form-group col-md-12"><label class="text-dark" for="meetingName">Meeting name</label><input class="form-control py-4" id="inputName" name="inputName" type="text" placeholder="Meeting Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                            <div class="validate"></div>
+                                                <div class="validate"></div>
                                             </div>
                                         </div>
                                         <div class="form-row">
-                                            <div class="form-group col-md-12"><label class="text-dark" for="inputTopic">Topic</label><input class="form-control py-4" id="inputTopic" name="inputTopic" type="text" placeholder="Your topic" data-toggle="tooltip" data-placement="bottom" title="" data-trigger="manual" data-html="true"  data-rule="required" data-msg="Enter meeting topic"/>
-                                            <div class="validate"></div>
+                                            <div class="form-group col-md-12"><label class="text-dark" for="inputTopic">Topic</label><input class="form-control py-4" id="inputTopic" name="inputTopic" type="text" placeholder="Your topic" data-toggle="tooltip" data-placement="bottom" title="" data-trigger="manual" data-html="true" data-rule="required" data-msg="Enter meeting topic" />
+                                                <div class="validate"></div>
                                             </div>
-                                            
+
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6"><label class="text-dark" for="inputPassword">Password</label><input class="form-control py-4" id="inputPassword" name="inputPassword" type="text" placeholder="BBB9876" data-rule="required" data-msg="Please enter password" />
-                                            <div class="validate"></div>
+                                                <div class="validate"></div>
                                             </div>
 
-                                            <div class="form-group col-md-6"><label class="text-dark" for="inputDate">Date</label><input class="form-control py-4" id="date" name="date" type="date" min="<?php date_default_timezone_set("Europe/London"); echo date("Y-m-d"); ?>" data-rule="required" data-msg="Please enter date"/>
-                                            <div class="validate"></div>
+                                            <div class="form-group col-md-6"><label class="text-dark" for="inputDate">Date</label><input class="form-control py-4" id="date" name="date" type="date" min="<?php date_default_timezone_set("Europe/London"); echo date("Y-m-d"); ?>" data-rule="required" data-msg="Please enter date" />
+                                                <div class="validate"></div>
                                             </div>
                                             <!-- <script type="text/javascript">
                                                 $(function() {
@@ -520,7 +520,7 @@ Deployed for: www.hostcommservers.com
                                                 <div class="form-row">
                                                     <label class="text-dark col-md-12" for="inputTime">Time</label>
                                                     <div class="form-group col-md-12"><input type="time" class="form-control py-4" name="inputTime" id="inputTime">
-                                                    <div class="time-valid validate"></div>
+                                                        <div class="time-valid validate"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -546,14 +546,14 @@ Deployed for: www.hostcommservers.com
 
 
                                         <div class="form-group"><label class="text-dark" for="inputAttendees">Attendees</label><textarea class="form-control py-3" id="inputAttendees" name="inputAttendees" type="text" placeholder="Enter a comma separated list of email ids" rows="3"></textarea>
-                                        <div class="valid-attend validate"></div>
+                                            <div class="valid-attend validate"></div>
                                         </div>
-                                        
-                                        <div class="form-group"><label class="text-dark" for="smsinvite">SMS Invite</label><input class="form-control py-3" id="smsinvite" type="tel"/>
-                                        <div class="validate valid-phone"></div>
+
+                                        <div class="form-group"><label class="text-dark" for="smsinvite">SMS Invite</label><input class="form-control py-3" id="smsinvite" type="tel" />
+                                            <div class="validate valid-phone"></div>
                                         </div>
-                                        
-                                        
+
+
 
 
                                     </div>
@@ -565,7 +565,6 @@ Deployed for: www.hostcommservers.com
                         </div>
                     </div>
                     <script>
-                    
                         $("#inputTopic").on('keyup change input', function(event) {
                             meeting = $(this).val();
                             var specials = /[?&:'"%#]/;
@@ -575,29 +574,29 @@ Deployed for: www.hostcommservers.com
                                 var text = "<i class='fa fa-info-circle info'></i> Meeting name should not contain any of these characters: ?, &, :, ', &quot;, %, #";
                                 var text = text.replace(/&quot;/g, '\"');
                                 $(this).attr('data-original-title', text).tooltip('show');
-                                
-                            } 
-                            
+
+                            }
+
                         });
-                        $("#inputTopic").on('blur',function() {
-                                $(this).tooltip('hide');
-                            });
-                        
-                        
-                        
-                         var telInput = $("#smsinvite");
-                            telInput.intlTelInput({
-                                utilsScript: "intl-tel-input/build/js/utils.js",
-                                preferredCountries: ["in", "us"],
-                                separateDialCode: true,
-                                initialCountry: "auto",
-                                geoIpLookup: function(success, failure) {
-                                    $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-                                        var countryCode = (resp && resp.country) ? resp.country : "";
-                                        success(countryCode);
-                                    });
-                                }
-                            });
+                        $("#inputTopic").on('blur', function() {
+                            $(this).tooltip('hide');
+                        });
+
+
+
+                        var telInput = $("#smsinvite");
+                        telInput.intlTelInput({
+                            utilsScript: "intl-tel-input/build/js/utils.js",
+                            preferredCountries: ["in", "us"],
+                            separateDialCode: true,
+                            initialCountry: "auto",
+                            geoIpLookup: function(success, failure) {
+                                $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+                                    var countryCode = (resp && resp.country) ? resp.country : "";
+                                    success(countryCode);
+                                });
+                            }
+                        });
 
                     </script>
 
@@ -696,7 +695,7 @@ Deployed for: www.hostcommservers.com
                                         <!-- Timeline Item 1-->
                                         <?php $email=$_SESSION["email"];
                                             $con=new DbConnector();
-                                            $my_query="select * from u_meetings where (uemail like '$email' or mattend like '%$email%') and mdatetime<=sysdate();";
+                                            $my_query="select * from u_meetings where (uemail like '$email' or mattend like '%$email%') and mdatetime<=sysdate() ORDER BY mdatetime desc;";
                                             $result = $con->query($my_query);
                                              while(($row=$con->fetchArray($result)))
                                                 {
@@ -740,7 +739,7 @@ Deployed for: www.hostcommservers.com
                                         <!-- Timeline Item 1-->
                                         <?php $email=$_SESSION["email"];
                                             $con=new DbConnector();
-                                            $my_query="select * from u_meetings where (uemail like '$email' or mattend like '%$email%') and mdatetime>=sysdate();";
+                                            $my_query="select * from u_meetings where (uemail like '$email' or mattend like '%$email%') and mdatetime>=sysdate() ORDER BY mdatetime;";
                                             $result = $con->query($my_query);
                                              while(($row=$con->fetchArray($result)))
                                                 {
@@ -793,44 +792,44 @@ Deployed for: www.hostcommservers.com
                                         <div class="form-row">
                                             <input type="hidden" name="uniqid" id="uniqid" value='<?php echo "$dbmuniq"; ?>'>
                                             <div class="form-group col-md-6"><label class="text-dark" for="meetingName">Meeting Name</label><input class="form-control py-4" id="meetingName" name="meetingName" placeholder="Meeting Name" type="text" data-rule="minlen:4" data-msg="Please enter at least 4 chars" disabled />
-                                            <div class="validate"></div>
+                                                <div class="validate"></div>
                                             </div>
 
-                                            <div class="form-group col-md-6"><label class="text-dark" for="topic">Topic</label><input class="form-control py-4" id="topic" name="topic" type="text" placeholder="Your topic"  data-toggle="tooltip" data-placement="bottom" title="" data-trigger="manual" data-html="true"  data-rule="required" data-msg="Enter meeting topic" disabled />
-                                            <div class="validate"></div>
+                                            <div class="form-group col-md-6"><label class="text-dark" for="topic">Topic</label><input class="form-control py-4" id="topic" name="topic" type="text" placeholder="Your topic" data-toggle="tooltip" data-placement="bottom" title="" data-trigger="manual" data-html="true" data-rule="required" data-msg="Enter meeting topic" disabled />
+                                                <div class="validate"></div>
                                             </div>
                                         </div>
 
                                         <div class="form-row">
                                             <div class="form-group col-md-6"><label class="text-dark" for="Password">Password</label><input class="form-control py-4" id="password" name="password" type="text" placeholder="BBB9876" data-rule="required" data-msg="Please enter password" disabled />
-                                            <div class="validate"></div>
+                                                <div class="validate"></div>
                                             </div>
 
                                             <div class="form-group col-md-6"><label class="text-dark" for="Date">Date</label><input class="form-control py-4" id="schedule_date" name="schedule_date" type="date" min="<?php date_default_timezone_set("Europe/London"); echo date("Y-m-d"); ?>" data-rule="required" data-msg="Please enter date" disabled />
-                                            <div class="validate"></div>
+                                                <div class="validate"></div>
                                             </div>
                                         </div>
 
                                         <div class="form-row">
                                             <div class="form-group col-md-6"><label class="text-dark" for="time">Time</label><input class="form-control py-4" id="schedule_time" name="schedule_time" type="time" disabled />
-                                            <div class="time-res validate"></div>
+                                                <div class="time-res validate"></div>
                                             </div>
 
                                             <div class="form-group col-md-6"><label class="text-dark" for="duration">Duration(Minutes)</label><input class="form-control py-4" id="schedule_duration" name="schedule_duration" type="text" placeholder="Duration in minutes" data-rule="required" data-msg="Please enter duration" disabled />
-                                            <div class="validate"></div>
+                                                <div class="validate"></div>
                                             </div>
                                         </div>
 
                                         <div class="form-group"><label class="text-dark" for="inputAttendees">Attendees</label><textarea class="form-control py-3" id="inputAttendes" name="inputAttendes" type="text" rows="3" placeholder="Enter a comma separated list of email ids" rows="3" data-rule="required" data-msg="Please enter atleast one email id" disabled></textarea>
-                                        <div class="validate"></div>
+                                            <div class="validate"></div>
                                         </div>
-                                        
-                                        
+
+
                                         <label class="text-dark" for="meetsms">SMS Invite</label>
                                         <div class="form-row">
-                                         <div class="form-group col-md-8"><input class="form-control py-4" id="meetsms" name="meetsms" type="text" disabled /></div>
-                                            
-                                            <div class="form-group col-md-4"><button type='button' class='btn btn-primary w-100' style="padding:12px;" id='sendsms' onclick="sendsms();"><i class="mr-2" data-feather="send"></i> Send SMS</button></div>    
+                                            <div class="form-group col-md-8"><input class="form-control py-4" id="meetsms" name="meetsms" type="text" disabled /></div>
+
+                                            <div class="form-group col-md-4"><button type='button' class='btn btn-primary w-100' style="padding:12px;" id='sendsms' onclick="sendsms();"><i class="mr-2" data-feather="send"></i> Send SMS</button></div>
                                         </div>
 
 
@@ -838,11 +837,12 @@ Deployed for: www.hostcommservers.com
                                     <div class="modal-footer mx-auto text-center">
                                         <?php 
                                          if($dbrole=="USER"){
-                                            echo "<button type='button' class='btn btn-success' id='joinmeeting' onclick='joinmeeting();'>Join Meeting</button>";
+                                           echo "<form method='post' action='/hostcomm/join/".$dbmuniq."'><input type='hidden' name='pass' value='".$dbmpass."'><button type='submit' class='btn btn-success' id='joinmeeting'>Join</button></form>";
+
                                          }else{
                                             echo "<button type='button' class='btn btn-success' id='reschedule_1' onclick='validateresc();'>Reschedule</button>";
                                             echo "<button type='button' class='btn btn-success' id='save_1' onclick='savemeeting();' hidden>Save</button>";
-                                            echo "<button type='button' class='btn btn-success' id='joinmeeting' onclick='joinmeeting();'>Join</button>";
+                                            echo "<form method='post' action='/hostcomm/join/".$dbmuniq."'><input type='hidden' name='pass' value='".$dbmpass."'><button type='submit' class='btn btn-success' id='joinmeeting'>Join</button></form>";
                                             echo "<button type='button' class='btn btn-danger' id='cancel_schedule_1' onclick='meetcancel();'>Cancel</button>";
 
                                          }
@@ -862,26 +862,27 @@ Deployed for: www.hostcommservers.com
 
                 </div>
             </main>
-             <script>
-                    
-                        $("#topic").on('keyup change input', function(event) {
-                            meeting = $(this).val();
-                            var specials = /[?&:'"%#]/;
-                            if (specials.test(meeting)) {
-                                meeting = meeting.replace(/[ ?&:'"%#.]/g, "");
-                                $(this).val(meeting);
-                                var text = "<i class='fa fa-info-circle info'></i> Meeting name should not contain any of these characters: ?, &, :, ', &quot;, %, #";
-                                var text = text.replace(/&quot;/g, '\"');
-                                $(this).attr('data-original-title', text).tooltip('show');
-                                
-                            } 
-                            
-                        });
-                        $("#topic").on('blur',function() {
-                                $(this).tooltip('hide');
-                            });
+            <script>
+                $("#topic").on('keyup change input', function(event) {
+                    meeting = $(this).val();
+                    var specials = /[?&:'"%#]/;
+                    if (specials.test(meeting)) {
+                        meeting = meeting.replace(/[ ?&:'"%#.]/g, "");
+                        $(this).val(meeting);
+                        var text = "<i class='fa fa-info-circle info'></i> Meeting name should not contain any of these characters: ?, &, :, ', &quot;, %, #";
+                        var text = text.replace(/&quot;/g, '\"');
+                        $(this).attr('data-original-title', text).tooltip('show');
+
+                    }
+
+                });
+                $("#topic").on('blur', function() {
+                    $(this).tooltip('hide');
+                });
+                
+                
+
             </script>
-            
             
             <footer class="footer mt-auto footer-light">
                 <div class="container-fluid">
@@ -908,6 +909,7 @@ Deployed for: www.hostcommservers.com
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js" crossorigin="anonymous"></script>
     <script src="assets/demo/date-range-picker-demo.js"></script>
+     <script src="js/validation.js"></script>
 </body>
 
 </html>
